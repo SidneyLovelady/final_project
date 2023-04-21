@@ -244,7 +244,9 @@ value="
 
 .control
 save all
-tran 1n 2u
+ac dec 10 1 1e9
+plot dB(v3#branch)
+tran 1n .02u
 plot v2#branch
 plot v3#branch
 .endc
@@ -252,10 +254,10 @@ plot v3#branch
 C {devices/lab_pin.sym} 130 -430 0 0 {name=p5 sig_type=std_logic lab=Iin
 }
 C {devices/gnd.sym} 130 -370 0 0 {name=l4 lab=GND}
-C {devices/isource.sym} 130 -400 0 0 {name=I2 value="AC 1 SIN 0 0.2e-3 1e6"}
+C {devices/isource.sym} 130 -400 0 0 {name=I2 value="AC 1 SIN 0 0.2e-3 100e6"}
 C {devices/vsource.sym} 790 -320 0 0 {name=V3 value=0}
 C {devices/lab_pin.sym} 790 -380 0 0 {name=p2 sig_type=std_logic lab=VDD}
-C {devices/vsource.sym} 350 -440 3 0 {name=V2 value=0}
+C {devices/vsource.sym} 350 -440 1 0 {name=V2 value=0}
 C {devices/gnd.sym} 610 -400 3 0 {name=l5 lab=GND}
 C {devices/gnd.sym} 610 -310 3 0 {name=l6 lab=GND}
 C {devices/gnd.sym} 790 -240 3 0 {name=l7 lab=GND}
